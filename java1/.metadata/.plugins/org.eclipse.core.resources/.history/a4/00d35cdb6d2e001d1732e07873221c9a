@@ -1,0 +1,8 @@
+package ch17;
+
+public abstract class Product {
+
+	String name;
+	
+	
+}

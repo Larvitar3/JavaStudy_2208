@@ -1,0 +1,9 @@
+package interfaces;
+
+public class ToyRobot extends HomeAppliances{
+	
+	String name;
+	
+	
+
+}

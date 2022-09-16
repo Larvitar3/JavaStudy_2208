@@ -1,0 +1,9 @@
+package ch17;
+
+public class Teddybear extends Product {
+
+	public Teddybear() {
+		super.name = "작은곰";
+	}
+	
+}

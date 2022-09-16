@@ -1,0 +1,30 @@
+package com.boot.company;
+
+import java.io.FileInputStream;
+
+public class UserInfoClient2 {
+
+	public static void main(String[] args) {
+
+		FileInputStream fis = new FileInputStream("db.properties");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

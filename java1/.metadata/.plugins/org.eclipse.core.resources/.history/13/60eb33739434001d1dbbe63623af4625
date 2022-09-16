@@ -1,0 +1,10 @@
+package ch05;
+
+public interface PlayerMovement {
+
+	class MoveLeft{
+		
+	}
+
+	
+}

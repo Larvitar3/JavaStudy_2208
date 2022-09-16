@@ -1,0 +1,67 @@
+package ch06;
+
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+import javax.swing.JFrame;
+
+
+public class MiniGame extends JFrame implements KeyListener{
+
+	 final int FRAME_WIDTH = 500;
+	 final int FRAME_HEIGTH = 500;
+	private BufferedImage backgroundImg;
+	private BufferedImage playerImage;
+	 
+	 
+	public MiniGame() {
+		initData();
+		setInitLayout();
+		addEventListener();
+	}
+	
+	public void initData() {
+		setTitle("미니게임");
+		setSize(FRAME_WIDTH, FRAME_HEIGTH);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		try {
+			backgroundImg = ImageIO.read(new File("Images/ background1.jpg"));
+			playerImage = ImageIO.read(new File("Images/ player1.png"));
+		} catch (IOException e) {
+			System.out.println("파일명 및 경로 확장자 확인하기");
+			System.exit(0); // 프로그램 자동 종료
+		}
+	}
+	
+	public void setInitLayout() {
+		setVisible(true);
+	}
+	
+	public void addEventListener() {
+		this.addKeyListener(this);
+	}
+	
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

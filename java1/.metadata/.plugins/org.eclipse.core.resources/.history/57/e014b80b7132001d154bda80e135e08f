@@ -1,0 +1,39 @@
+package ch18;
+
+public class Book {
+
+	private int bookId;
+	private String title;
+	private String aurhor;
+	
+	public Book(int bookId, String title, String aurhor) {
+		this.bookId = bookId;
+		this.title = title;
+		this.aurhor = aurhor;
+	}
+	@Override
+	public String toString() {
+		return this.title;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		// 현재 객체title과 obj안에 들어오는 녀석의 title 글자가 같다면 true를 리턴 아니면 false 리턴
+//		this.title.equals(obj);
+		
+		// 1번 this.title과 Object녀석과 값이 같다면 같은 책 이라고 결과
+		if(this.title == ((Book)obj).title) {
+			return true;
+		}else {
+			return false;
+		}
+		
+		return ;
+	}
+
+	
+	
+	
+	
+	
+}

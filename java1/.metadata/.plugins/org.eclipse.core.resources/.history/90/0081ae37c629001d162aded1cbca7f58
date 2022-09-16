@@ -1,0 +1,9 @@
+package Starcrapt;
+
+public class Bus {
+
+	// 버스 번호 (이름)
+	// 승객 수
+	// 수익금
+	
+}

@@ -1,0 +1,22 @@
+package ch17;
+
+public class MainTest {
+
+	public static void main(String[] args) {
+		
+		Airpod airpod = new Airpod();
+		Teddybear teddybear = new Teddybear();
+		Product[] products = new Product[2];
+		
+		products[0] = airpod;
+		products[1] = teddybear;
+		
+		
+		ToyMuchine muchine = new ToyMuchine();
+		muchine.setProducts(null);
+		
+		
+		
+	}
+	
+}

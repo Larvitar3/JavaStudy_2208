@@ -1,0 +1,157 @@
+package ch06;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Random;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.border.LineBorder;
+import javax.swing.border.TitledBorder;
+
+public class Lotto extends JFrame implements ActionListener {
+
+	final int FRAME_WIDHT = 800;
+	final int FRAME_HEIGTH = 800;
+	int[] lottoNumber = new int[6];
+	
+	JLabel lottoTitle;
+	JPanel lottoWrap;
+	JLabel lottoSubTitle;
+	JPanel lottoNumberWrap;
+	JLabel lottoNumber1;
+	JLabel lottoNumber2;
+	JLabel lottoNumber3;
+	JLabel lottoNumber4;
+	JLabel lottoNumber5;
+	JLabel lottoNumber6;
+	JButton lottoButton;
+	
+	
+	public Lotto() {
+		initData();
+		setInitLayout();
+		addEventListener();
+	}
+
+	private void initData() {
+		setSize(FRAME_WIDHT, FRAME_WIDHT);
+		setTitle("로또 번호 추첨");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		lottoTitle = new JLabel("★ LOTTO ★");
+		lottoWrap = new JPanel();
+		lottoSubTitle = new JLabel("▼ LOTTO 추천받기 ▼");
+		lottoNumberWrap = new JPanel();
+		lottoNumber1 = new JLabel();
+		lottoButton = new JButton("번호 확인하기");
+	}
+
+	private void setInitLayout() {
+		setVisible(true);
+		setResizable(false);
+		setLayout(null);
+		add(lottoTitle);
+		add(lottoWrap);
+		lottoWrap.add(lottoSubTitle);
+		lottoWrap.add(lottoNumberWrap);
+		lottoNumberWrap.add(lottoNumber1);
+		lottoWrap.setLayout(null);
+		lottoNumberWrap.setLayout(null);
+		add(lottoButton);
+		lottoNumberWrap.add(lottoNumber1);
+
+		lottoTitle.setSize(FRAME_WIDHT, 200);
+		lottoTitle.setLocation(0, 0);
+		lottoTitle.setFont(new Font("Serif", Font.BOLD, 50));
+		lottoTitle.setForeground(Color.WHITE);
+		lottoTitle.setHorizontalAlignment(JLabel.CENTER);
+		lottoTitle.setOpaque(true);
+		lottoTitle.setBackground(Color.PINK);
+		// end of lottoTitle
+
+		lottoWrap.setSize(FRAME_WIDHT, 400);
+		lottoWrap.setLocation(0, 200);
+		// end of lottoWrap
+
+		lottoSubTitle.setSize(400, 60);
+		lottoSubTitle.setLocation(175, 50);
+		lottoSubTitle.setFont(new Font("sanSerif", Font.BOLD, 20));
+		lottoSubTitle.setForeground(Color.WHITE);
+		lottoSubTitle.setHorizontalAlignment(JLabel.CENTER);
+		lottoSubTitle.setOpaque(true);
+		lottoSubTitle.setBackground(Color.gray);
+		lottoSubTitle.setBorder(new TitledBorder(new LineBorder(Color.black)));
+		// end of lottoSubTitle
+
+		lottoNumberWrap.setSize(400, 350);
+		lottoNumberWrap.setLocation(175, 130);
+		lottoNumberWrap.setOpaque(true);
+		lottoNumberWrap.setBackground(Color.gray);
+		// end of lottoNumberWrap
+		
+		lottoNumber1.setSize(300, 80);
+		lottoNumber1.setLocation(50, 80);
+
+		lottoButton.setSize(400, 50);
+		lottoButton.setLocation(175, 620);
+		lottoButton.setFont(new Font("sanSerif", Font.BOLD, 20));
+
+		Random random = new Random();
+		
+		
+
+
+		for (int i = 0; i < lottoNumber.length; i++) {
+			lottoNumber[i] = random.nextInt(45) + 1;
+
+			for (int j = 0; j < i; j++) {
+				if (lottoNumber[i] == lottoNumber[j]) {
+					i--;
+					break;
+				}
+			}
+		} // end of for 로또번호
+
+		for (int i = 0; i < lottoNumber.length; i++) {
+			for (int j = i + 1; j < lottoNumber.length; j++) {
+				if (lottoNumber[i] > lottoNumber[j]) {
+					int temp = lottoNumber[i];
+					lottoNumber[i] = lottoNumber[j];
+					lottoNumber[j] = temp;
+				}
+			}
+		} // end of for 오름차순
+
+		for (int i = 0; i < 6; i++) {
+			System.out.print(lottoNumber[i] + "  ");
+		}
+		System.out.println();
+	}
+	private void addEventListener() {
+		lottoButton.addActionListener(this);
+	}
+	
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// 만약 버튼이 눌러졌다면 LottoNumber을 실행시켜 화면에 띄워라
+		// LottoNumber을 콘솔창에서 GUI창으로 출력
+		if(e.getSource() == lottoButton) {
+			System.out.println("실행.");
+			lottoNumber1.setText(lottoNumber[0] + "");
+		}
+
+	}
+
+	public static void main(String[] args) {
+		new Lotto();
+
+	}
+
+
+}

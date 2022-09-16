@@ -1,0 +1,5 @@
+package starcrapt3;
+
+public interface Terran {
+
+}

@@ -1,0 +1,22 @@
+package starcrapt3;
+
+public class Zergrling extends Unit implements Zerg{
+;
+
+	public Zergrling(String name) {
+		this.name = name;
+		this.power = 5;
+		this.hp = 50;
+	}
+	
+	@Override
+	public void attack(Zergrling zergrling) {
+		if(this == zergrling) {
+			System.out.println("자기자신을 공격할 수 없습니다.");
+		}else {
+			super.attack(zergrling);
+		}
+	}
+
+
+}

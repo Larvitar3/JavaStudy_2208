@@ -1,0 +1,9 @@
+package ch17;
+
+public class Airpod extends Product{
+
+	public Airpod() {
+		name = "에어팟";
+	}
+	
+}

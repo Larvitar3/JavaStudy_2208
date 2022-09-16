@@ -1,0 +1,10 @@
+package ch01;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class FlowLayoutEx extends JFrame{
+
+	JButton button1;
+	
+}

@@ -1,0 +1,101 @@
+package ch05;
+
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class MyImageFrame extends JFrame implements MouseListener{
+	
+	// 재료 선정
+	// 1. JLable 사용해서 이밎 그리기
+	JLabel playerLabel;
+
+	public MyImageFrame() {
+		initData();
+		setInitLayout();
+		addEventListener();
+	}
+	
+	private void initData() {
+		setSize(500, 500);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		playerLabel = new JLabel(new ImageIcon("player1.png"));
+		// ▲ 이미지 만들기
+	}
+	
+	private void setInitLayout() {
+		setVisible(true);
+		setLayout(null);
+		// 좌표 기반 배치 관리자
+		// 사이즈, 위치
+		playerLabel.setSize(100, 130);
+		playerLabel.setSize(150, 230);
+		playerLabel.setLocation(175, 150);
+		add(playerLabel);
+
+
+	}
+	
+	// 2. 마우스로 위치 이동시키기
+	private void addEventListener() {
+		
+		this.addMouseListener(this);
+		
+	}
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		
+		int x = e.getX() - playerLabel.getBounds().width / 2;
+		int y = e.getY() - playerLabel.getBounds().height / 2;
+		
+		playerLabel.setLocation(x,y);
+		
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+	
+	
+	public static void main(String[] args) {
+		new MyImageFrame();
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,11 @@
+package ch03;
+
+import java.awt.image.BufferedImage;
+
+public class MyBufferedImage {
+
+	BufferedImage backgroundImage;
+	BufferedImage player;
+	
+	
+}

@@ -1,0 +1,17 @@
+package com.boot.company;
+
+// UserInfoClient 코드를 개발하는 개발자는 인터페이스만 보고 코드를 구현 가능
+public class UserInfoClient {
+	
+	// DBTYPE 
+	public String DB_TYPE = "MYSQL";
+	
+	public static void main(String[] args) {
+		
+		// 사용자한테 User 정보를 받습니다.
+		UserInfo userInfo =  new UserInfo("1", "1234", "김춘식");
+		
+		
+	}
+
+}

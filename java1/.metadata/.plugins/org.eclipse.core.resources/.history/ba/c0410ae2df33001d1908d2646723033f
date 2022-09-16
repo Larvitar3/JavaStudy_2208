@@ -1,0 +1,59 @@
+package ch04;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+class MyFrame1 extends JFrame implements ActionListener{
+	
+	JButton button1;
+	JButton button2;
+
+	public MyFrame1() {
+		
+		initData();
+		setInitLayout();
+		addEventListener();
+		
+	}
+	
+	private void initData() {
+		setTitle("EventListener 연습");
+		setSize(500, 500);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		button1 = new JButton("☆ 버 튼 ★");
+		button2 = new JButton("○ 버 튼 ●");
+	}
+	
+	private void setInitLayout() {
+		setVisible(true);
+		add(button1);
+		add(button2);
+	}
+	
+	private void addEventListener() {
+		
+	}
+	
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+
+public class MyEventListener1 {
+	
+
+	public static void main(String[] args) {
+		
+		new MyFrame1();
+
+	}
+
+}

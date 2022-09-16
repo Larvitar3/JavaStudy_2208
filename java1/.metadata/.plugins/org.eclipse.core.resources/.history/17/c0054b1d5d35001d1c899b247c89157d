@@ -1,0 +1,14 @@
+package Lotto;
+
+import javax.swing.JFrame;
+
+public class LottoFrame extends JFrame{
+
+	LottoNumber lottoNumber;
+	
+	public static void main(String[] args) {
+		LottoNumber lottoNumber = new LottoNumber();
+		int[] number = lottoNumber.createLottoNumbers();
+	}
+	
+}

@@ -1,0 +1,22 @@
+package ch05;
+
+import javax.swing.JFrame;
+
+public class MouesEcentListenerEx1 extends JFrame{
+	
+	public MouesEcentListenerEx1() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	private void initData() {
+		
+	}
+	
+	private void setInitLayout() {
+		
+	}
+	
+	private void addEventLis
+	
+
+}

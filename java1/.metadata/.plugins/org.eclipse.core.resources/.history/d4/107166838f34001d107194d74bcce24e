@@ -1,0 +1,39 @@
+package ch05;
+
+import java.awt.event.MouseAdapter;
+
+import javax.swing.JFrame;
+
+public class MyFrame6 extends JFrame {
+
+    public MyFrame6() {
+        initData();
+        setInitLayout();
+        addEventListener();
+    }
+
+    private void initData() {
+        setTitle("어댑터 클래스 이용");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(500, 500);
+    }
+    private void setInitLayout() {
+        setVisible(true);
+        setResizable(false);
+    }
+    private void addEventListener() {
+    	
+    	this.addMouseListener(new MyMouseListener());
+    }
+    
+    // 내부클래스 생성
+    private class MyMouseListener extends MouseAdapter{
+    	
+    }
+    
+    
+    
+    
+    
+    
+}

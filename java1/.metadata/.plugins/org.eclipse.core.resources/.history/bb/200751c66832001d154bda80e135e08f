@@ -1,0 +1,7 @@
+package starcrapt3;
+
+public interface Terran {
+
+	public abstract void attack(Unit unit);
+	
+}

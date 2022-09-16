@@ -1,0 +1,20 @@
+package ch01;
+
+import javax.swing.JFrame;
+
+public class GridLayoutEx1 extends JFrame{
+
+	public GridLayoutEx1() {
+		initData();
+		setInitData();t
+	}
+	
+	private void initData() {
+		
+	}
+	
+	private void setInitData() {
+		
+	}
+	
+}

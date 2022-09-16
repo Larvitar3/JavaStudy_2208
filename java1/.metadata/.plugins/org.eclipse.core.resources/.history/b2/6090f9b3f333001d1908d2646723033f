@@ -1,0 +1,46 @@
+package ch04;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class ColorChangeFrame2 extends JFrame {
+
+	JButton button1;
+
+	
+	public ColorChangeFrame2() {
+		initData();
+		setInitLayout();
+		addEventLayout();
+	}
+	
+	private void initData() {
+
+		
+	}
+	
+	private void setInitLayout() {
+
+		
+		
+	}
+	
+	private void addEventLayout() {
+
+	}
+	
+
+	
+	public static void main(String[] args) {
+		
+		new ColorChangeFrame2();
+		
+	}
+}

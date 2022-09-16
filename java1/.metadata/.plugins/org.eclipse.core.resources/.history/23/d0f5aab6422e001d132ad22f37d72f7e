@@ -1,0 +1,17 @@
+package ch13;
+
+public class MainTest5 {
+
+	public static void main(String[] args) {
+		
+		Customer customer1 = new Customer();
+		// customer1. : 보너스 포인트 보임. 보너스 비율 보임.
+		
+		
+		
+		
+		
+		
+	}
+	
+}

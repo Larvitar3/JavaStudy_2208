@@ -1,0 +1,6 @@
+package com.boot.company;
+
+// DB 쪽 연결 개발자는 UserInfoDao 인터페이스만 보고 기능을 구현 가능
+public class UserInfoMySqlDao {
+
+}

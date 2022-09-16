@@ -1,0 +1,58 @@
+package ch04;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class ColorChangeFrame extends JFrame implements ActionListener{
+
+	JPanel centerPanel;
+	JPanel bottomPanel;
+	
+	JButton button1;
+	JButton button2;
+	
+	public ColorChangeFrame() {
+		
+	}
+	
+	private void initData() {
+		setSize(500,500);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		centerPanel = new JPanel();
+		bottomPanel = new JPanel();
+		
+		button1 = new JButton("핑크");
+		button2 = new JButton("주황");
+		
+	}
+	
+	private void setInitLayout() {
+		setVisible(true);
+		this.setLayout(new BorderLayout());
+		this.add(centerPanel, BorderLayout.CENTER);
+		this.add(bottomPanel, BorderLayout.SOUTH);
+		
+		bottomPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 20, 20));
+		bottomPanel.add(button1);
+		bottomPanel.add(button2);
+		
+		
+	}
+	
+	private void addEventLayout() {
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		new ColorChangeFrame();
+		
+	}
+	
+	
+}

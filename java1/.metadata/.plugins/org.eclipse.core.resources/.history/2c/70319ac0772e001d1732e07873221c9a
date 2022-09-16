@@ -1,0 +1,9 @@
+package interfaces2;
+
+public class Refrigerator extends HomeAppliances implements RemoteController{
+
+
+
+	
+	
+}

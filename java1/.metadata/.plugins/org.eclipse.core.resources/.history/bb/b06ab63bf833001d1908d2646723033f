@@ -1,0 +1,43 @@
+package ch05;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class MouesEventListenerEx1 extends JFrame {
+
+	JLabel label;
+
+	public MouesEventListenerEx1() {
+		initData();
+		setInitLayout();
+		addEventListener();
+	}
+
+	private void initData() {
+		setSize(500, 500);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		label = new JLabel("Hello, Java");
+	}
+
+	private void setInitLayout() {
+		setVisible(true);
+		setLayout(null);
+
+		// 사이즈 좌표값 위치
+		label.setSize(100, 100);
+		label.setLocation(100, 100);
+		add(label);
+
+	}
+
+	private void addEventListener() {
+
+	}
+
+	public static void main(String[] args) {
+
+		new MouesEventListenerEx1();
+
+	}
+
+}

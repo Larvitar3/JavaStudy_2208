@@ -1,0 +1,57 @@
+package Starcrapt;
+
+public class Bus {
+
+	// 상태
+	// 버스 번호 (이름)
+	// 승객 수
+	// 수익금
+	
+	private int number;
+	private int passenger;
+	private int money;
+//	private int total;
+	
+	// 생성자
+	public Bus() {
+		
+	}
+	
+	// getter
+	public int getNumber() {
+		return number;
+	}
+	
+	public int getPassenger() {
+		return passenger;
+	}
+	
+	public int getMoney() {
+		return money;
+	}
+	
+	// 기능
+	// 승객 수로 생긴 수익금 변화
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

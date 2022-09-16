@@ -1,0 +1,19 @@
+package starcrapt3;
+
+public class Marine extends Unit implements Terran{
+
+	public Marine(String name) {
+		this.name = name;
+		this.power = 5;
+		this.hp = 80;
+	}
+
+	@Override
+	public void attack(Unit unit) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+
+}

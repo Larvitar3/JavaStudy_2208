@@ -1,0 +1,25 @@
+package ch01;
+
+import java.awt.Dimension;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class Ssddd extends JFrame{
+
+	private JButton button1;
+	private JButton button2;
+	private JButton button3;
+	
+	public void initData() {
+		setTitle(getTitle());
+		setSize(new Dimension(500, 500));
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

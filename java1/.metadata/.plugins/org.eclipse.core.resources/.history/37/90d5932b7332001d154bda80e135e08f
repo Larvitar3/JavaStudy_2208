@@ -1,0 +1,14 @@
+package ch18;
+
+// !! 모든 클래스의 최상위 클래스는 Object class이다.
+// 자바에서는 extends 키워드를 단 한번만 사용할 수 있다.
+// 자바에서는 다중 상속을 지원하지 않는다.
+// 단, 최상이 클래스인 Object클래스는 예외
+public class Student extends Object{
+
+	@Override
+	public String toString() {
+		return "학생클래스 입니다";
+	}
+	
+}

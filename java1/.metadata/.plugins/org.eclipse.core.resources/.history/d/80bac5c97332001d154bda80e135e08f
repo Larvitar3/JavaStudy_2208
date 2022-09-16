@@ -1,0 +1,14 @@
+package ch18;
+
+public class MainTest2 {
+
+	public static void main(String[] args) {
+		
+		Student student1 = new Student(1, "자이라");
+		Student student2 = new Student(2, "스웨인");
+		Student student3 = new Student(3, "벨코즈");
+		Student student4 = new Student(1, "자이라");
+
+	}
+
+}

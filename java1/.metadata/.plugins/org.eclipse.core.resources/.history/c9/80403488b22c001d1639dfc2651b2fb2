@@ -1,0 +1,39 @@
+package ch13;
+
+public class MainTest {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
+
+// 선임 클래스
+class ANumber {
+	
+	public int num1;
+	public int num2;
+	public int num3;
+	
+}
+
+class B {
+	public int num1;
+	public int num2;
+	public int num3;
+	public int num4;
+	public int num5;
+	public int num6;
+}
+
+// 상속 ( extends )
+class C extends ANumber{
+	
+	public int num4;
+	public int num5;
+	
+	
+}
+
+

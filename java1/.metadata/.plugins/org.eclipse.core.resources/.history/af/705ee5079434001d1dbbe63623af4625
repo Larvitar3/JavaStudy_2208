@@ -1,0 +1,14 @@
+package ch05;
+
+public interface PlayerMovement {
+
+	public void moveLeft();
+	
+	public void moveRight();
+	
+	public void moveUp();
+	
+	public void moveDown();
+
+	
+}

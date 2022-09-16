@@ -1,0 +1,25 @@
+package ch14;
+
+public class Animal {
+	
+	// 기능 
+	
+	public void move() {
+		System.out.println("동물이 움직입니다.");
+	}
+
+	public void eating() {
+		System.out.println("먹습니다.");
+	}
+	
+} // end of Animal class
+
+class Human extends Animal {
+	
+	
+	
+}
+
+
+
+

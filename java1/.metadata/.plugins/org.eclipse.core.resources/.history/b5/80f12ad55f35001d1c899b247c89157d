@@ -1,0 +1,17 @@
+package Lotto;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class LottoFrame extends JFrame{
+
+	LottoNumber lottoNumber = new LottoNumber();
+	JLabel jLabel1 = new JLabel();
+	
+	public void setupLottoNumber() {
+		int[] numbers = lottoNumber.lottonNumSelected();
+		jLabel1.setText(numbers[0] + "");
+	}
+
+	
+}

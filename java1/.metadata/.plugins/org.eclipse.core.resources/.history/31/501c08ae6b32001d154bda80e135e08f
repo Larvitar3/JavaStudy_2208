@@ -1,0 +1,22 @@
+package ch18;
+
+public class Book {
+
+	private int bookId;
+	private String title;
+	private String aurhor;
+	
+	public Book(int bookId, String title, String aurhor) {
+		this.bookId = bookId;
+		this.title = title;
+		this.aurhor = aurhor;
+	}
+	@Override
+	public String toString() {
+		return "책 제목 : " + this.title + "  저자 : " + aurhor;
+	}
+	
+	
+	
+	
+}

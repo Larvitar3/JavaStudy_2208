@@ -1,0 +1,23 @@
+package ch02;
+
+import javax.swing.JFrame;
+
+public class MyFramePanlEx1 extends JFrame{
+
+	public MyFramePanlEx1() {
+		
+	}
+	
+	private void initData() {
+		
+	}
+	
+	private void setInitLayout() {
+		
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

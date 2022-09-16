@@ -1,0 +1,37 @@
+package com.boot.company;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+public class UserInfoClient2 {
+
+	public static void main(String[] args) {
+
+		try {
+			FileInputStream fis = new FileInputStream("a");
+			System.out.println("파일을 잘 찾았습니다.");
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+			System.out.println("요청하신 파일이름이 없습니다.");
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

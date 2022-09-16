@@ -1,0 +1,54 @@
+package ch03_1;
+
+import java.awt.Graphics;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+
+
+class MyFrame2 extends JFrame {
+
+	MyDrawPanel myDrawPanel;
+
+	public MyFrame2() {
+		initData();
+		setInitLayout();
+	}
+
+	public void initData() {
+		setTitle("paint 연슴");
+		setSize(800, 800);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		myDrawPanel = new MyDrawPanel();
+	}
+
+	public void setInitLayout() {
+		setVisible(true);
+		add(myDrawPanel);
+	}
+
+	class MyDrawPanel extends JPanel {
+
+		@Override
+		public void paint(Graphics g) {
+			super.paint(g);
+			g.drawString("안녕하세요 2D Test", 50, 50);
+			g.drawLine(50, 50, 100, 100);
+			g.drawRect(200, 200, 150, 150);
+
+		}
+
+	}// end of MyDrawPanel Calss
+	
+}// end of MyFRame2 Calss
+
+public class PaintMainTest1 {
+
+	public static void main(String[] args) {
+
+		new MyFrame2();
+
+	}
+
+}

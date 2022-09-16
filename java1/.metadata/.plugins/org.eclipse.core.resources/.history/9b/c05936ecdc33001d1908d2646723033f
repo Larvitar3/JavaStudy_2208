@@ -1,0 +1,39 @@
+package ch04;
+
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+class MyFrame1 extends JFrame{
+	
+	JButton button;
+	
+	public MyFrame1() {
+		initData();
+		setInitData();
+		addEventListener();
+	}
+	
+	private void initData() {
+		setSize(500,500);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+	private void setInitData() {
+		setVisible(true);
+		setLayout(new FlowLayout());
+	}
+	
+	private void addEventListener() {
+		
+	}
+	
+	
+}
+
+public class EventListenerEx1 {
+
+	
+	
+}

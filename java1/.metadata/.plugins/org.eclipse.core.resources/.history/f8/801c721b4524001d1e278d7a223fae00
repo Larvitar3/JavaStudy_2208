@@ -1,0 +1,21 @@
+package ch01;
+
+public class DataType1 {
+
+	// main 함수는 코드의 시작점
+	public static void main(String[] args) {
+		
+		// 데이터 타입에 종류는 크게 2가지
+		// 1. 기본 데이터 타입 (primitive type)
+		// 2. 참조 타입 (Reference Type) => 주소값
+		
+		// 기본 데이터 타입의 종류
+		byte b;
+		
+		
+		
+	}// end of main
+
+}// end of class
+
+// 블록의 범위는 절대적이다.

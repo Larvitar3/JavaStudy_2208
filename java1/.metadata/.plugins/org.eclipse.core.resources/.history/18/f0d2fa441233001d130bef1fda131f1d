@@ -1,0 +1,31 @@
+package ch01;
+
+import javax.swing.JButton;
+
+public class BorderLayoutEx1 {
+	
+	JButton button1 = new JButton("동");
+	JButton button2 = new JButton("서");
+	JButton button3 = new JButton("남");
+	JButton button4 = new JButton("북");
+	JButton button5 = new JButton("센터");
+	
+	public BorderLayoutEx1() {
+		initData();
+		setInitData();
+	}
+	
+	private void initData() {
+		
+	}
+	
+	private void setInitData() {
+		
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

@@ -1,0 +1,13 @@
+package Lotto;
+
+import javax.swing.JFrame;
+
+public class LottoFrame extends JFrame{
+
+	LottoNumber lottoNumber;
+	
+	public void setupLottoNumber() {
+		int[] numbers = lottoNumber.lottonNumSelected();
+	}
+	
+}

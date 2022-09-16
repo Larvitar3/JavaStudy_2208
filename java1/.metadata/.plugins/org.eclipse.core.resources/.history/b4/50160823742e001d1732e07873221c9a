@@ -1,0 +1,15 @@
+package interfaces;
+
+public class HomeAppliances {
+	
+	int wight;
+	int height;
+	String color;
+	
+	public abstract void turnOn() {
+	}
+	public void turnOff() {
+		System.out.println("냉장고를 끕니다.");
+	}
+
+}

@@ -1,0 +1,26 @@
+package ch02;
+
+import javax.swing.JFrame;
+
+public class MyFramePanlEx1 extends JFrame{
+
+	public MyFramePanlEx1() {
+		initData();
+		setInitLayout();
+	}
+	
+	private void initData() {
+		setTitle("패널연습");
+		setSize(400, 400);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+	private void setInitLayout() {
+		
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+
+}
