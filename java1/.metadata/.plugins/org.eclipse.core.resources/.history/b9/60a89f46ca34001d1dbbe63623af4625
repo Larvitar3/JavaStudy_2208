@@ -1,7 +1,0 @@
-package ch06;
-
-import javax.swing.JPanel;
-
-public class LottoNumber extends JPanel {
-
-}
