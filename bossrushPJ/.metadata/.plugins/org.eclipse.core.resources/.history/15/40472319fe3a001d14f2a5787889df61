@@ -1,0 +1,60 @@
+package bossrush;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class BossFrame extends JFrame {
+
+	private JLabel backgroundMapImage;
+	private BossNomal boss;
+//	private BossMeteor bossMeteor;
+
+	BossMeteor[] bossMeteors = new BossMeteor[999999];
+
+	public BossFrame() {
+		initData();
+		setInitLayout();
+		addEventListenter();
+
+		for (int i = 0; i < bossMeteors.length; i++) {
+			bossMeteors[i].left();
+		}
+	}
+
+	private void initData() {
+		backgroundMapImage = new JLabel(new ImageIcon("Images/bossBackgroudMap.jpg"));
+		setContentPane(backgroundMapImage);
+		setSize(1000, 700);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		boss = new BossNomal();
+	}
+
+	private void setInitLayout() {
+		setVisible(true);
+		setLayout(null);
+		setResizable(false);
+		setLocationRelativeTo(null);
+//		while (boss.die) {
+		for (int i = 0; i < bossMeteors.length; i++) {
+			bossMeteors[i] = new BossMeteor();
+			System.out.println("슝");
+//			}
+		}
+
+		add(boss);
+		for (int i = 0; i < bossMeteors.length; i++) {
+			add(bossMeteors[i]);
+		}
+	}
+
+	private void addEventListenter() {
+
+	}
+
+	public static void main(String[] args) {
+		new BossFrame();
+	}
+
+}

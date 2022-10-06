@@ -1,0 +1,55 @@
+package bossrush;
+
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
+public class BossNomal extends JLabel{
+	
+	int hp;
+	String name;
+	
+	private final int BOSS_WIDTH = 293;
+	private final int BOSS_HEIGHT = 590;
+	
+	private final int BOSS_X = 700;
+	private final int BOSS_Y = 55;
+	
+	
+	
+	private ImageIcon boss;
+	
+	public BossNomal() {
+		initData();
+		setInitLayout();
+	}
+
+
+	private void initData() {
+		boss = new ImageIcon("Images/bossImage.png");
+		System.out.println("보스 소환");
+	}
+
+	
+	private void setInitLayout() {
+
+		setIcon(boss);
+		setSize(BOSS_WIDTH, BOSS_HEIGHT);
+		
+	}
+	
+	
+	public void attack() {
+		
+	}
+	
+	public void beAttack() {
+		
+	}
+	
+	public void die() {
+		
+	}
+	
+	
+	
+}

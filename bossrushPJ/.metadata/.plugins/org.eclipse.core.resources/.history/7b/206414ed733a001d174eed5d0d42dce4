@@ -1,0 +1,39 @@
+package bossrush;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class BossNomalBackgroud extends JFrame {
+
+	private JPanel backroundimg;
+	private BossNomal bossNomal;
+	
+	public BossNomalBackgroud() {
+		initData();
+		setInitLayout();
+	}
+	
+	
+	private void initData() {
+		setSize(1000, 700);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		backroundimg = new JPanel();
+	}
+
+
+	private void setInitLayout() {
+		
+		setVisible(true);
+		setLayout(null);
+		setResizable(false);
+		setLocationRelativeTo(null);
+		
+		
+	}
+
+
+	public static void main(String[] args) {
+		new BossNomalBackgroud();
+	}
+	
+}

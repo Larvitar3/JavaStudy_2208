@@ -1,0 +1,29 @@
+package bossrush;
+
+import javax.swing.JLabel;
+
+public class BossNomal extends JLabel{
+	
+	int hp;
+	String name;
+	
+	private int x;
+	private int y;
+	
+	
+	
+	public void attack() {
+		
+	}
+	
+	public void beAttack() {
+		
+	}
+	
+	public void die() {
+		
+	}
+	
+	
+	
+}

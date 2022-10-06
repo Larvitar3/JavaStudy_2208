@@ -1,0 +1,42 @@
+package bossrush;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class BossFrame extends JFrame{
+	
+	private JLabel backgroundMapImage;
+	private BossNomal Boss;
+	
+	public BossFrame() {
+		initData();
+		setInitLayout();
+		addEventListenter();
+	}
+
+	private void initData() {
+		backgroundMapImage = new JLabel(new ImageIcon("Images/bossBackgroudMap.jpg"));
+		setContentPane(backgroundMapImage);
+		setSize(1000, 700);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+	}
+
+	private void setInitLayout() {
+		setVisible(true);
+		setLayout(null);
+		setResizable(false);
+		setLocationRelativeTo(null);
+	}
+
+	private void addEventListenter() {
+		
+	}
+	
+	public static void main(String[] args) {
+		new BossFrame();
+	}
+	
+	
+}

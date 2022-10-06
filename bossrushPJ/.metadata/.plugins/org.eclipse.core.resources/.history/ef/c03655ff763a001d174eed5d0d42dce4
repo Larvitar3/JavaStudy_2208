@@ -1,0 +1,10 @@
+package bossrush;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class BossFrame extends JFrame{
+	
+	private JLabel backgroundMapImage;
+
+}

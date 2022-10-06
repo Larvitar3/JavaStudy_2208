@@ -1,0 +1,75 @@
+package bossrush;
+
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
+public class BossMeteor extends JLabel{
+
+	private BossFrame bossFrame;
+	
+	BossNomal bossNomal;
+	
+	private int x;
+	private int y;
+	
+	private final int BOSSMETEOR_WIDTH = 89;
+	private final int BOSSMETEOR_HEIGHT = 80;
+	
+	private ImageIcon bossMeteor;
+	
+	private boolean left;
+	
+	public BossMeteor() {
+		initData();
+		setInitLayout();
+
+	}
+
+	private void initData() {
+		
+		bossMeteor = new ImageIcon("Images/bossAttack.png");
+		bossNomal = new BossNomal();
+		left = false;
+		
+	}
+	
+
+	private void setInitLayout() {
+		x = 700;
+		y = 100;
+		
+		setIcon(bossMeteor);
+		setSize(BOSSMETEOR_WIDTH, BOSSMETEOR_HEIGHT);
+		setLocation(x,y);
+	}
+	
+	public void left() {
+		left = true;
+		new Thread(() -> {
+
+			while (true) {
+				x -=1;
+				setLocation(x, y);
+
+				try {
+					Thread.sleep(10);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+		}).start();
+		
+	
+		
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

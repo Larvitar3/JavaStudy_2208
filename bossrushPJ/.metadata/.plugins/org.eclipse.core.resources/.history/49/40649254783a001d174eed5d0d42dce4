@@ -1,0 +1,47 @@
+package bossrush;
+
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
+public class BossNomal extends JLabel{
+	
+	int hp;
+	String name;
+	
+	private int x;
+	private int y;
+	
+	private ImageIcon boss;
+	
+	public BossNomal() {
+		initData();
+		setInitLayout();
+	}
+
+
+	private void initData() {
+		boss = new ImageIcon("Images/bossImage.png");
+	}
+
+	
+	private void setInitLayout() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+	public void attack() {
+		
+	}
+	
+	public void beAttack() {
+		
+	}
+	
+	public void die() {
+		
+	}
+	
+	
+	
+}

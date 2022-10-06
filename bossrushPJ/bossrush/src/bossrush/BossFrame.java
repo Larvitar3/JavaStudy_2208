@@ -4,6 +4,13 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+<<<<<<< HEAD
+public class BossFrame extends JFrame{
+	
+	private JLabel backgroundMapImage;
+	private BossNomal boss;
+	
+=======
 public class BossFrame extends JFrame {
 
 	private JLabel backgroundMapImage;
@@ -12,14 +19,18 @@ public class BossFrame extends JFrame {
 
 	BossMeteor[] bossMeteors = new BossMeteor[10];
 
+>>>>>>> bdc4cf1baec25153c4428693d00b7c08bb6e8721
 	public BossFrame() {
 		initData();
 		setInitLayout();
 		addEventListenter();
+<<<<<<< HEAD
+=======
 
 		for (int i = 0; i < bossMeteors.length; i++) {
 			bossMeteors[i].left();
 		}
+>>>>>>> bdc4cf1baec25153c4428693d00b7c08bb6e8721
 	}
 
 	private void initData() {
@@ -27,8 +38,13 @@ public class BossFrame extends JFrame {
 		setContentPane(backgroundMapImage);
 		setSize(1000, 700);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+<<<<<<< HEAD
+		
+		boss =  new BossNomal();
+=======
 
 		boss = new BossNomal();
+>>>>>>> bdc4cf1baec25153c4428693d00b7c08bb6e8721
 	}
 
 	private void setInitLayout() {
@@ -36,6 +52,22 @@ public class BossFrame extends JFrame {
 		setLayout(null);
 		setResizable(false);
 		setLocationRelativeTo(null);
+<<<<<<< HEAD
+		
+		add(boss);
+		
+	}
+
+	private void addEventListenter() {
+		
+	}
+	
+	public static void main(String[] args) {
+		new BossFrame();
+	}
+	
+	
+=======
 
 		add(boss);
 		for (int i = 0; i < bossMeteors.length; i++) {
@@ -55,4 +87,5 @@ public class BossFrame extends JFrame {
 		new BossFrame();
 	}
 
+>>>>>>> bdc4cf1baec25153c4428693d00b7c08bb6e8721
 }

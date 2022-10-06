@@ -8,7 +8,7 @@ import java.io.IOException;
  * 
  * 입력 스트림
  * 파일에 한 바이트씩 자료 읽기
- * 
+ * 		
  * */
 
 public class MainTest1 {
@@ -19,14 +19,12 @@ public class MainTest1 {
 		
 		try {
 			fis = new FileInputStream("boot_a.txt");
-			
 			System.out.print((char)fis.read());
 			System.out.print((char)fis.read());
 			System.out.print((char)fis.read());
 			System.out.print((char)fis.read());
 			System.out.print((char)fis.read());
 			System.out.print((char)fis.read());
-			
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally { 

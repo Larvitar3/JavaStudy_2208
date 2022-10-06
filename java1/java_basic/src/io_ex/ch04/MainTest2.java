@@ -11,10 +11,10 @@ import java.io.IOException;
 public class MainTest2 {
 
 	public static void main(String[] args) {
-		
+	
 		try(FileWriter fw = new FileWriter("writer_1.txt", true)){
 			
-			char buf[] = {' ', '반','가','워'};
+			char buf[] = {'반','가','워'};
 			fw.write(buf);
 
 		}catch (Exception e) {

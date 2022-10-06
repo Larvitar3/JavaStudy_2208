@@ -19,13 +19,13 @@ public class MainTest1 {
 		
 		FileOutputStream fos = null;
 		try {
-			// 만약 파일이 없다면 
+			// 만약 파일이 없다면 생성된다.
 			fos = new FileOutputStream("output_a.txt");
 			fos.write(65);
-			fos.write(66);
-			fos.write('c');
-			fos.write('d');
-			fos.write('e');
+//			fos.write(66);
+//			fos.write('c');
+//			fos.write('d');
+//			fos.write('e');
 		} catch (IOException e) {
 			e.printStackTrace();
 		}finally {

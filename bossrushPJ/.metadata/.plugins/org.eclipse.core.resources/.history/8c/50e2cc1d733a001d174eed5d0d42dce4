@@ -1,0 +1,22 @@
+package bossrush;
+
+public class BossNomal {
+
+	int hp;
+	String name;
+	
+	public void attack() {
+		
+	}
+	
+	public void beAttack() {
+		
+	}
+	
+	public void die() {
+		
+	}
+	
+	
+	
+}
