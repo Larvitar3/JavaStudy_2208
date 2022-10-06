@@ -74,7 +74,8 @@ public class MainFrame extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == insertBtn) {
-			
+			setVisible(false);
+			new InsertNumber();
 		}else if(e.getSource() == selectBtn) {
 			
 		}else if(e.getSource() == updataBtn) {
