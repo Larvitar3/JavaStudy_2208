@@ -8,6 +8,7 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="&#x09;private static final String DB_CHARSET = &quot;UTF-8&quot;;"/>
 			<item value="background"/>
 			<item value="state"/>
 			<item value="leftWallCrash"/>
