@@ -41,6 +41,7 @@ public class EmployeeDao implements IEmployeeDao {
 			preparedStatement = dbHelper.getConnention().prepareStatement(sql);
 			preparedStatement.setString(1, title);
 			resultSet = preparedStatement.executeQuery();
+			
 			System.out.println(sql);
 
 			while (resultSet.next()) {

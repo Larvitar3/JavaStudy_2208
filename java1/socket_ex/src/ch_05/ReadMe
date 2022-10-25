@@ -1,0 +1,21 @@
+
+ 소켓통신을 이용한 채팅 프로그램 만들기
+ 
+ [ 기능 ]
+ 양방향, 다중접속 구현,
+ 같은 방 유저끼리 채팅 가능
+ 귓속말(쪽지)
+ 방만들기
+ 방나가기
+ 전체 유저 목록 확인
+ 
+ [ 프로토콜 별 기능 ]
+ Whisper : 귓속말
+ Chatting : Chatting/방 이름, 유저이름, 내용
+ NewUser : 새로운 유저 방송 처리
+ NewRoom : 새로운 방 방송 처리
+ EnterRoom : 방 입장 ▶ EnterRoom/방이름, 유저이름
+ ExitRoom : 방 퇴장 ▶ ExitRoom/방이름, 유저이름
+ OldUser/OldRoom : 기존에 있는 정보의 업데이트
+ 
+

@@ -66,7 +66,33 @@ public class MovieService implements IMovieService{
 	@Override
 	public List<ResponseMovie> selectMovieByName(String movieName) {
 		// LIKE 사용 , 공백 X
-		return null;
+		
+		String query =  "SELECT *"
+				+ " FROM 영화"
+				+ " WHERE 이름 LIKE ? ";
+		
+		List<ResponseMovie> list = new ArrayList<>();
+		
+		try {
+			psmt = dbHelper.getConnention().prepareStatement(query);
+			psmt.setString(1, "%" + movieName.trim() + "%");
+			rs = psmt.executeQuery();
+			
+			while(rs.next()) {
+				ResponseMovie movie = new ResponseMovie();
+				movie.setMovieName(rs.getString("이름"));
+				movie.setYear(rs.getString("개봉년도"));
+				movie.setSales(rs.getString("매출액"));
+				movie.setAudience(rs.getString("관객수"));
+				movie.setRating(rs.getString("평점"));			
+				list.add(movie);
+
+			}
+			System.out.println(query);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return list;
 	}
 
 	@Override
@@ -186,12 +212,15 @@ public class MovieService implements IMovieService{
 	public void delteMovie(int movieId) {
 		// 트랜잭션 사용
 		try {
+			
+			dbHelper.getConnention().setAutoCommit(false);
+			
 			String query2 = " DELETE FROM 출연 WHERE 영화번호 = ? ";
 			psmt = dbHelper.getConnention().prepareStatement(query2);
 			psmt.setInt(1, movieId);
 			psmt.executeUpdate();
 			
-			dbHelper.getConnention().setAutoCommit(false);
+			
 			String query = " DELETE FROM 영화 WHERE 번호 = ? ";
 			
 			psmt = dbHelper.getConnention().prepareStatement(query);
@@ -220,7 +249,12 @@ public class MovieService implements IMovieService{
 		MovieService a = new MovieService();
 		RequestMovie movie = new RequestMovie();
 		
-		a.delteMovie(17);
+		// a.delteMovie(2);
+		List<ResponseMovie> ab = a.selectMovieByName("그녀");
+		for (ResponseMovie responseMovie : ab) {
+			System.out.println(responseMovie);
+		}
+//		a.selectMovieByName("명량");
 		
 //		movie.set영화이름("이춘식의 모험기 4");
 //		movie.set개봉년도(2023);
