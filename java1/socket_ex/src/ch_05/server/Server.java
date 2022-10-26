@@ -5,22 +5,13 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Vector;
 
-import lombok.Data;
-
-@Data
 public class Server {
-
-	// server 세팅
-	public static final int HOST_PORT = 33333;
+	
+	ServerSocket serverSocket;
 	public static final String HOST_IP = "127.0.0.1";
-	
-	private Server mContext = this;
-	private ServerSocket serverSocket;
-	private Socket socket;
-
+	public static final int HOST_PORT = 12644;
+	Vector<UserSocket> users = new Vector<>();
 	private boolean isRun = true;
-	
-	private Vector<UserSocket> users = new Vector<>();
 	
 	public Server() {
 		initData();
@@ -35,36 +26,53 @@ public class Server {
 			new Thread(()-> {
 				
 				while(isRun) {
+					
 					try {
-						socket = serverSocket.accept();
+						Socket socket = serverSocket.accept();
 						
-						UserSocket userSocket = new UserSocket(users.size(), socket, mContext);
+						UserSocket userSocket = new UserSocket(socket, this);
 						userSocket.start();
+						
 						users.add(userSocket);
 						
 					} catch (IOException e) {
 						e.printStackTrace();
+						isRun = false;
 					}
 				}
-				
 			}).start();
-			
 		} catch (IOException e) {
-			isRun = false;
 			e.printStackTrace();
-		} // try / catch end
-
-	}
-
+		}
+	} // end of initData
+	
 	public void broadcast(String msg) {
-		for( int i = 0; i < users.size(); i ++ ) {
-			users.get(i).sendMessage(msg);
+		for (int i = 0; i < users.size(); i++) {
+			UserSocket userInfo = users.elementAt(i);
+			userInfo.sendMessage(msg);
 		}
 	}
+	
+	
+	
+	
+	
+	
 
 	public static void main(String[] args) {
 		new Server();
 	}
 	
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

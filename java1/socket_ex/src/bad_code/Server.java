@@ -343,7 +343,6 @@ public class Server extends JFrame implements ActionListener {
 		public RoomInfomation(String roomName, UserInfomation u) {
 			this.roomName = roomName;
 			this.room_user_vc.add(u);
-			//와우 대박. ㅋㅋ
 			u.myCurrentRoomName = roomName;
 		}
 
