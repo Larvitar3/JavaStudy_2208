@@ -12,8 +12,13 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
+import ch_05.server.Server;
+import lombok.Data;
+
 public class ServerGUI extends JFrame implements ActionListener {
 
+	ServerGUI mContext = this;
+	Server server;
 	private JPanel background;
 	private JLabel title;
 	private JTextArea serverLog;
@@ -21,6 +26,7 @@ public class ServerGUI extends JFrame implements ActionListener {
 
 	private JLabel titleHost;
 	private JTextField inputHost;
+	// + "\n"
 
 	private final int WIDTH = 500;
 	private final int HEIGHT = 680;
@@ -39,8 +45,8 @@ public class ServerGUI extends JFrame implements ActionListener {
 		background = new JPanel();
 		title = new JLabel("◎ Live Chat ◎");
 		titleHost = new JLabel("▼ PORT ▼");
-		inputHost = new JTextField("12644");
-		serverLog = new JTextArea("server log ------");
+		inputHost = new JTextField("20000");
+		serverLog = new JTextArea("[ 서버가 시작됩니다. ]" + "\n");
 		connectBtn = new JButton("접속하기");
 
 	}
@@ -51,7 +57,11 @@ public class ServerGUI extends JFrame implements ActionListener {
 		serverLog.setSize(400, 390);
 		serverLog.setLocation(50, 200);
 		serverLog.setFont(new Font("Dialog", Font.PLAIN, 14));
+		serverLog.setLineWrap(true);
+		serverLog.setWrapStyleWord(true);
+		serverLog.setEditable(false);
 		
+
 		repaint();
 	}
 
@@ -96,23 +106,78 @@ public class ServerGUI extends JFrame implements ActionListener {
 		connectBtn.addActionListener(this);
 
 	}
-	
-	// dispose() 
 
 	@Override
-	public void actionPerformed(ActionEvent e) {
-		if(e.getSource() == connectBtn) {
+	public void actionPerformed(ActionEvent e) { 
+		if (e.getSource() == connectBtn) {
 			serverLog();
 			remove(inputHost);
 			remove(titleHost);
 			remove(background);
 			remove(connectBtn);
+			server = new Server(mContext);
 		}
 
 	}
 
 	public static void main(String[] args) {
 		new ServerGUI();
+	}
+
+	public Server getServer() {
+		return server;
+	}
+
+	public void setServer(Server server) {
+		this.server = server;
+	}
+
+	public void setBackground(JPanel background) {
+		this.background = background;
+	}
+
+	public void setTitle(JLabel title) {
+		this.title = title;
+	}
+
+	public JTextArea getServerLog() {
+		return serverLog;
+	}
+
+	public void setServerLog(JTextArea serverLog) {
+		this.serverLog = serverLog;
+	}
+
+	public JButton getConnectBtn() {
+		return connectBtn;
+	}
+
+	public void setConnectBtn(JButton connectBtn) {
+		this.connectBtn = connectBtn;
+	}
+
+	public JLabel getTitleHost() {
+		return titleHost;
+	}
+
+	public void setTitleHost(JLabel titleHost) {
+		this.titleHost = titleHost;
+	}
+
+	public JTextField getInputHost() {
+		return inputHost;
+	}
+
+	public void setInputHost(JTextField inputHost) {
+		this.inputHost = inputHost;
+	}
+
+	public int getWIDTH() {
+		return WIDTH;
+	}
+
+	public int getHEIGHT() {
+		return HEIGHT;
 	}
 
 }

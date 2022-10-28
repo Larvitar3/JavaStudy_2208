@@ -212,16 +212,14 @@ public class Client extends JFrame implements ActionListener {
 			socket = new Socket(ip, port);
 			network();
 		} catch (UnknownHostException e) {
-			JOptionPane.showMessageDialog(null, "연결실패!", "알림",
-					JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "연결실패!", "알림", JOptionPane.ERROR_MESSAGE);
 		} catch (IOException e) {
-			JOptionPane.showMessageDialog(null, "연결실패!", "알림",
-					JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "연결실패!", "알림", JOptionPane.ERROR_MESSAGE);
 		}
 	}
 
 	private void network() {
-		
+
 		try {
 			is = socket.getInputStream();
 			dis = new DataInputStream(is);
@@ -255,11 +253,10 @@ public class Client extends JFrame implements ActionListener {
 								dis.close();
 								dos.close();
 								socket.close();
-								JOptionPane.showMessageDialog(null, "서버가 종료됨!", "알림",
-										JOptionPane.ERROR_MESSAGE);
+								JOptionPane.showMessageDialog(null, "서버가 종료됨!", "알림", JOptionPane.ERROR_MESSAGE);
 								break;
 							} catch (Exception e2) {
-								return ;
+								return;
 							}
 						}
 					}
@@ -267,9 +264,8 @@ public class Client extends JFrame implements ActionListener {
 			});
 			cth.start();
 		} catch (IOException e) {
-			JOptionPane.showMessageDialog(null, "연결실패!", "알림",
-					JOptionPane.ERROR_MESSAGE);
-		}// Stream 준비완료
+			JOptionPane.showMessageDialog(null, "연결실패!", "알림", JOptionPane.ERROR_MESSAGE);
+		} // Stream 준비완료
 		connect_btn.setEnabled(false);
 	}
 
@@ -288,13 +284,12 @@ public class Client extends JFrame implements ActionListener {
 			totalList_lst.setListData(user_Vclist);
 		} else if (protocol.equals("OldUser")) {
 			user_Vclist.add(message);
-			totalList_lst.setListData(user_Vclist);
+			totalList_lst.setListData(user_Vclist);   
 		} else if (protocol.equals("Note")) {
 			st = new StringTokenizer(message, "@");
 			String user = st.nextToken();
 			String note = st.nextToken();
-			JOptionPane.showMessageDialog(null, note, user + "로 부터 온 메세지",
-					JOptionPane.CLOSED_OPTION);
+			JOptionPane.showMessageDialog(null, note, user + "로 부터 온 메세지", JOptionPane.CLOSED_OPTION);
 		} else if (protocol.equals("CreateRoom")) {
 			// 방만들기가 성공했을 경우
 			my_roomName = message;
@@ -302,8 +297,7 @@ public class Client extends JFrame implements ActionListener {
 			btn_outRoom.setEnabled(true);
 			btn_makeRoom.setEnabled(false);
 		} else if (protocol.equals("CreateRoomFail")) {
-			JOptionPane.showMessageDialog(null, "같은 방 이름이 존재합니다.!", "알림",
-					JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "같은 방 이름이 존재합니다.!", "알림", JOptionPane.ERROR_MESSAGE);
 		} else if (protocol.equals("new_Room")) {
 			roomList_vc.add(message);
 			roomList_lst.setListData(roomList_vc);
@@ -315,24 +309,24 @@ public class Client extends JFrame implements ActionListener {
 			roomList_lst.setListData(roomList_vc);
 		} else if (protocol.equals("JoinRoom")) {
 			my_roomName = message;
-			JOptionPane.showMessageDialog(null, "채팅방 (  " + my_roomName
-					+ " ) 에 입장완료", "알림", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(null, "채팅방 (  " + my_roomName + " ) 에 입장완료", "알림",
+					JOptionPane.INFORMATION_MESSAGE);
 			viewChat_ta.setText("");
-		} else if(protocol.equals("UserOut")) {
+		} else if (protocol.equals("UserOut")) {
 			user_Vclist.remove(message);
-			sendmessage("OutRoom/"+my_roomName);
-		} else if(protocol.equals("UserData_Updata")) {
+			sendmessage("OutRoom/" + my_roomName);
+		} else if (protocol.equals("UserData_Updata")) {
 			totalList_lst.setListData(user_Vclist);
 			roomList_lst.setListData(roomList_vc);
-		} else if(protocol.equals("OutRoom")) {
-			viewChat_ta.append("*** (( "+my_roomName+"에서 퇴장 ))***\n");
+		} else if (protocol.equals("OutRoom")) {
+			viewChat_ta.append("*** (( " + my_roomName + "에서 퇴장 ))***\n");
 			my_roomName = null;
 			btn_makeRoom.setEnabled(true);
 			btn_outRoom.setEnabled(false);
-		} else if(protocol.equals("EmptyRoom")) {
+		} else if (protocol.equals("EmptyRoom")) {
 			roomList_vc.remove(message);
-		//클라이언트가 강제 종료 되었고 방이 비었을때 방 목록에서 그 방을 없애준다.	
-		} else if(protocol.equals("ErrorOutRoom") ) {
+			// 클라이언트가 강제 종료 되었고 방이 비었을때 방 목록에서 그 방을 없애준다.
+		} else if (protocol.equals("ErrorOutRoom")) {
 			roomList_vc.remove(message);
 		}
 	}
@@ -346,6 +340,7 @@ public class Client extends JFrame implements ActionListener {
 			e.printStackTrace();
 		}
 	}
+
 	// 이벤트리스너
 	private void addListener() {
 		connect_btn.addActionListener(this);
@@ -361,20 +356,20 @@ public class Client extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == connect_btn) {
-			if(hostIP_tf.getText().length() ==0) {
+			if (hostIP_tf.getText().length() == 0) {
 				hostIP_tf.setText("IP를 입력하세요");
 				hostIP_tf.requestFocus();
-			} else if(port_tf.getText().length() ==0) {
+			} else if (port_tf.getText().length() == 0) {
 				port_tf.setText("포트번호를 입력하세요");
 				port_tf.requestFocus();
-			} else if(userID_tf.getText().length() == 0) {
+			} else if (userID_tf.getText().length() == 0) {
 				userID_tf.setText("id 를 입력하세요");
 				userID_tf.requestFocus();
 			} else {
 				ip = hostIP_tf.getText();
-				try{
-				port = Integer.parseInt(port_tf.getText().trim());
-				}catch (Exception e2) {
+				try {
+					port = Integer.parseInt(port_tf.getText().trim());
+				} catch (Exception e2) {
 					port_tf.setText("잘못 입력하였습니다.");
 				}
 				user_id = userID_tf.getText().trim();
@@ -384,14 +379,12 @@ public class Client extends JFrame implements ActionListener {
 			}
 		} else if (e.getSource() == confirm_btn) {
 			System.out.println("전송버튼클릭");
-			sendmessage("Chatting/" + my_roomName + "/"
-					+ chatting_tf.getText().trim());
+			sendmessage("Chatting/" + my_roomName + "/" + chatting_tf.getText().trim());
 		} else if (e.getSource() == sendNote_btn) {
 			System.out.println("쪽지보내기버튼 클릭");
 			String user = (String) totalList_lst.getSelectedValue();
 			if (user == null) {
-				JOptionPane.showMessageDialog(null, "대상을 선택하세요", "알림",
-						JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "대상을 선택하세요", "알림", JOptionPane.ERROR_MESSAGE);
 			}
 			String note = JOptionPane.showInputDialog("보낼메세지");
 			if (note != null) {
@@ -404,13 +397,11 @@ public class Client extends JFrame implements ActionListener {
 			btn_makeRoom.setEnabled(false);
 			sendmessage("JoinRoom/" + joinRoom);
 		} else if (e.getSource() == chatting_tf) {
-			if(chatting_tf.getText().length() == 0 ){
+			if (chatting_tf.getText().length() == 0) {
 				System.out.println("이게 0값으로 들어가나?");
-				sendmessage("Chatting/" + my_roomName + "/"
-						+ chatting_tf.getText()+"   ");
-			}else {
-				sendmessage("Chatting/" + my_roomName + "/"
-						+ chatting_tf.getText());
+				sendmessage("Chatting/" + my_roomName + "/" + chatting_tf.getText() + "   ");
+			} else {
+				sendmessage("Chatting/" + my_roomName + "/" + chatting_tf.getText());
 			}
 		} else if (e.getSource() == btn_makeRoom) {
 			System.out.println("방생성버튼클릭");
@@ -418,14 +409,15 @@ public class Client extends JFrame implements ActionListener {
 			if (roomName != null) {
 				sendmessage("CreateRoom/" + roomName);
 			}
-		} else if(e.getSource() == btn_outRoom) {
+		} else if (e.getSource() == btn_outRoom) {
 			System.out.println("방나가기버튼클릭.");
-			sendmessage("OutRoom/"+my_roomName);
-		} else if(e.getSource() == btn_end) {
+			sendmessage("OutRoom/" + my_roomName);
+		} else if (e.getSource() == btn_end) {
 			System.exit(0);
 		}
 		chatting_tf.setText("");
 	}
+
 	public static void main(String[] args) {
 		new Client();
 	}
