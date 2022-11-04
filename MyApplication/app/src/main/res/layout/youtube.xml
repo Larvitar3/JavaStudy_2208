@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:background="@color/black">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/youtube"
+            android:gravity="center_vertical"
+            android:scaleType="fitCenter"
+            />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:text="youtube"
+            android:textSize="30dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+<!--Tab bar end -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CACACA"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="390dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="370dp"
+                    android:layout_height="240dp"
+                    android:layout_margin="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/some"
+                        android:scaleType="fitCenter"/>
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:text="10:35"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:background="#C1000000"
+                        android:layout_gravity="bottom|end"
+                        android:layout_margin="10dp"/>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/profile"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="닉 주디 어릴적 영상"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:textColor="#353535"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="주토피아영상수집가"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            android:textColor="#535353"/>
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="370dp"
+                    android:layout_height="240dp"
+                    android:layout_margin="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/some2"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:text="10:35"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:background="#C1000000"
+                        android:layout_gravity="bottom|end"
+                        android:layout_margin="10dp"/>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/profile"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginRight="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="여우 닉 "
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:textColor="#353535"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="주토피아영상수집가"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            android:textColor="#535353"/>
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="370dp"
+                    android:layout_height="240dp"
+                    android:layout_margin="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/some3"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:text="10:35"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:background="#C1000000"
+                        android:layout_gravity="bottom|end"
+                        android:layout_margin="10dp"/>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/profile"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="주토피아 영상_01"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:textColor="#353535"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="주토피아영상수집가"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            android:textColor="#535353"/>
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="370dp"
+                    android:layout_height="240dp"
+                    android:layout_margin="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/some4"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:text="10:35"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:background="#C1000000"
+                        android:layout_gravity="bottom|end"
+                        android:layout_margin="10dp"/>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/profile"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="주토피아 영상_02"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:textColor="#353535"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="주토피아영상수집가"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            android:textColor="#535353"/>
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="370dp"
+                    android:layout_height="240dp"
+                    android:layout_margin="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/some5"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:text="10:35"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:background="#C1000000"
+                        android:layout_gravity="bottom|end"
+                        android:layout_margin="10dp"/>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/profile"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="주토피아 영상_03"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:textColor="#353535"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="주토피아영상수집가"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            android:textColor="#535353"/>
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="370dp"
+                    android:layout_height="240dp"
+                    android:layout_margin="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/some6"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:text="10:35"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:background="#C1000000"
+                        android:layout_gravity="bottom|end"
+                        android:layout_margin="10dp"/>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/profile"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="주토피아 영상_04"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:textColor="#353535"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="주토피아영상수집가"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            android:textColor="#535353"/>
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        #box_wrap{
+            width: 1000px;
+            height: auto;
+            box-sizing: border-box;
+            margin-top: 200px;
+        }
+
+        .img_box_wrap{
+            width: 200px;
+            height: 200px;
+            float: left;
+            box-sizing: border-box;
+            margin-left: 50px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        
+
+        a>img{
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .img_box_wrap > p{
+            width: auto;
+            height: auto;
+            font-size: 20px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .img_box_wrap > p:hover{
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box_wrap">
+        <div class="img_box_wrap">
+            <a href="#">
+                <img src="some2.png"/>
+            </a>
+            <p>
+                첫번째 이미지
+            </p>
+        </div>
+        <div class="img_box_wrap">
+            <a href="#">
+                <img src="some3.png"/>
+            </a>
+            <p>
+                두번째 이미지
+            </p>
+        </div>
+        <div class="img_box_wrap">
+            <a href="#">
+                <img src="profile.png"/>
+            </a>
+            <p>
+                세번째 이미지
+            </p>
+        </div>
+        <div class="img_box_wrap">
+            <a href="#">
+                <img src="some6.png"/>
+            </a>
+            <p>
+                네번째 이미지
+            </p>
+        </div>
+    </div>
+</body>
+</html>

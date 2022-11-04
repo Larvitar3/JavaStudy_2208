@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    LinearLayout : 자식을 수평이나 수직으로 배치
+    RelativeLaout : 상대 레이아웃
+    화면에서 왼쪽 아래에 위치 지시
+    * 지시를 위한 기준이 있어야한다.
+    1. 화면 ( 부모가 기준 )
+    2. 특정한 뷰를 지정해서 배치
+
+    부모기준으로 속성을 줄 때 Parent 가 들어간다.
+    :layout_alignParent위치 = "true"
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:background="@color/purple_200"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+
+    <TextView
+        android:layout_alignParentEnd="true"
+        android:background="@color/purple_700"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/teal_200"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+
+    <TextView
+        android:layout_alignParentStart="true"
+        android:background="@color/teal_700"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+
+    <TextView
+        android:layout_centerInParent="true"
+        android:background="@color/black"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+
+</RelativeLayout>

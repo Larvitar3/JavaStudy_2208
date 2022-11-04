@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--
+        정렬 속성
+        gravity
+        * 부모 : 자신의 크기에서 이동
+        * 자식 : 자신의 크기에서 이동
+        ( 만약 자식의 크기가 컨텐츠에 딱 맞다면 이동 불가 )
+
+        layout_gravity
+        부모 기준으로 어디로 위치할껀가 정하는 것
+
+
+    -->
+
+    <TextView
+        android:textSize="30dp"
+        android:text="안녕어엉"
+        android:gravity="right"
+        android:layout_gravity="center"
+        android:background="@color/teal_700"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+    />
+
+<!--
+    중첩 LinearLayout
+-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/purple_500"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="@color/purple_200" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/purple_500"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="@color/purple_200" />
+
+    </LinearLayout>
+
+</LinearLayout>

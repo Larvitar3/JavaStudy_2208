@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    자식들을 수평 수직으로 배치하는 관리자
+    부모가 될 수 있다.
+    orientation
+    vertical 수직방향
+    horizontal 수평방향
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textSize="30dp"
+        android:text="text"
+        android:textStyle="bold"
+        android:textColor="@color/purple_500"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:textSize="30dp"
+        android:text="text2"
+        android:textStyle="bold"
+        android:textColor="@color/teal_700"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!--
+    xml 사용시 주의사항
+    느슨한 언어, 문법에 오류가 있으면 확인이 안될 때가 있다.
+-->
+<!--
+    ScrollView 는 반드시 하나의 자식만 가질 수 있다.
+    속성 fillViewport를 반드시 true로 해서 사용
+-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+        <!--
+    스크롤바 삭제 = " none "
+-->
+
+        <!--
+        ScrollView 사용 시 반드시 알아야하는 개념
+         오직 하나의 자식 뷰만 가질 수 있다.
+        -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="안녕"
+                android:textSize="100dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="안녕"
+                android:textSize="100dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="안녕"
+                android:textSize="100dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="안녕"
+                android:textSize="100dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="안녕"
+                android:textSize="100dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="안녕"
+                android:textSize="100dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="안녕"
+                android:textSize="100dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="안녕"
+                android:textSize="100dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="안녕"
+                android:textSize="100dp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

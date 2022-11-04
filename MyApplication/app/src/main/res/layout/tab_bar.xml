@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#3F51B5"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            >
+
+            <TextView
+                android:id="@+id/arrow1"
+                android:layout_centerInParent="true"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  ←"
+                android:textSize="30dp"
+                android:textColor="@color/white"
+
+                />
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/arrow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  Simple Tabs"
+                android:textSize="30dp"
+                android:textColor="@color/white"
+                />
+
+        </RelativeLayout>
+
+
+
+<!-- 버튼 바 -->
+        <LinearLayout
+            android:weightSum="3"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/purple_500"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="ONE"
+                android:textSize="25dp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="TWO"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="THREE"
+                android:textSize="25dp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                />
+
+
+        </LinearLayout>
+
+
+
+    </FrameLayout>
+
+
+
+</LinearLayout>

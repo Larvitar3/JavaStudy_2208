@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap{
+            width: 500px;
+            height: 800px;
+            border: 2px solid saddlebrown;
+            margin: 50px auto;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+        }
+        #li_wrap{
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 240px;
+            height: 100px;
+            box-sizing: border-box;
+            overflow: hidden;
+            float: left;
+            margin-left: 20px;
+            margin-top: 50px;
+            background-color: aquamarine;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .box:first-child{
+            margin-left: 0;
+        }
+
+        .box:nth-child(3){
+            margin-left: 0;
+        }
+
+        .box:nth-child(5){
+            margin-left: 0;
+        }
+     
+        .box > img {
+            width: 100%;
+            height: auto;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div id="wrap">
+        <ul id="li_wrap">
+            <li class="box"><img src="profile.png" alt=""></li>
+            <li class="box"><img src="some2.png" alt=""></li>
+            <li class="box"><img src="some3.png" alt=""></li>
+            <li class="box"><img src="some5.png" alt=""></li>
+            <li class="box"><img src="some6.png" alt=""></li>
+        </ul>
+    </div>
+
+</body>
+</html>

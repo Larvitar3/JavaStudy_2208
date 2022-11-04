@@ -1,0 +1,14 @@
+body{
+    background-color: burlywood;
+}
+
+p{
+    width: 400px;
+    height: 200px;
+    font-size: 50px;
+    border: 3px solid white;
+    color: aliceblue;
+    text-align: center;
+    line-height: 200px;
+    margin: 60px;
+}

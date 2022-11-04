@@ -5,13 +5,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Vector;
 
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-
-import ch_05.gui.ClientGUI;
-import ch_05.gui.ServerGUI;
+import ch01.ServerGUI;
 import lombok.Data;
 
 

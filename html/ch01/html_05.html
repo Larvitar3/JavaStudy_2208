@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            display: block;
+           margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.naver.com/" target="_self">
+        네이버 이동(기본 값)
+    </a>
+    <a href="https://www.naver.com/" target="_blank">
+        네이버 이동(새탭 열기)
+    </a>
+    <a href="https://www.naver.com/" target="_parent">
+        네이버 이동 : 부모 프레임에서 문서를 연다
+    </a>
+    <a href="https://www.naver.com/" target="_top">
+        네이버 이동?
+    </a>
+
+    <div><a href="html_01.html">H_01 페이지 이동</a></div>
+    <a href="html_01.html"><img src="profile.png" alt="프로필"/></a>
+    <!-- 폴더 밖으로 나가기 ../  -->
+
+    <button onclick="document.location='html_04.html'">
+        버튼
+    </button>
+    <!-- onclick ★ -->
+
+    <a href="mailto:iw_br@kakao.com">sendEmail</a>
+    <!-- mail 보내긔 -->
+
+</body>
+</html>

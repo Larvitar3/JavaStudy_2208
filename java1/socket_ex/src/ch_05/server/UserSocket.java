@@ -51,6 +51,7 @@ public class UserSocket extends Thread {
 			for (int i = 0; i < mContext.users.size(); i++) {
 				UserSocket us = mContext.users.elementAt(i);
 				sendMessage("OldUser/" + us.getUserName());
+				System.out.println("------------------------------");
 			}
 
 			mContext.users.add(this);

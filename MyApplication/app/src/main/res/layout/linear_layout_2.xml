@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+<!--
+    거의 대부분의 컴포넌트들은
+    width 와 height 속성을 가지고 있다
+    match_parent 속성이란 화면을 꽉 채움
+    wrap_content 컨텐츠만큼 공간을 차지한다.
+-->
+
+<!--
+    scaleType 이미지 비율 속성
+ -->
+    <ImageView
+        android:src="@drawable/player2"
+        android:scaleType="fitCenter"
+        android:background="#000000"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+
+/>
+
+    <TextView
+        android:textSize="50dp"
+        android:text="안녕"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+/>
+</LinearLayout>

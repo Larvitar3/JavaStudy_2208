@@ -7,7 +7,7 @@
 	<item key="TypeHierarchyViewPart.qualifiednames" value="false"/>
 	<item key="TypeHierarchyViewPart.linkeditors" value="false"/>
 	<item key="TypeHierarchyViewPart.orientation" value="3"/>
-	<item key="org.eclipse.jdt.ui.lastextjar" value="C:\LoLChessInfoPJ\lib"/>
+	<item key="org.eclipse.jdt.ui.lastextjar" value="C:\tools"/>
 	<item key="filters_last_used" value="filter_imports;"/>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item key="group_libraries" value="true"/>
@@ -107,8 +107,8 @@
 		<item key="AccessModifier" value="2"/>
 	</section>
 	<section name="DialogBounds_GenerateToStringDialog">
-		<item key="DIALOG_X_ORIGIN" value="310"/>
-		<item key="DIALOG_Y_ORIGIN" value="71"/>
+		<item key="DIALOG_X_ORIGIN" value="684"/>
+		<item key="DIALOG_Y_ORIGIN" value="94"/>
 		<item key="DIALOG_WIDTH" value="516"/>
 		<item key="DIALOG_HEIGHT" value="691"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
