@@ -38,10 +38,10 @@ var command = 'OPEN';
     case 'CLOSE ':
       broadcase("영업 종료");
       break;
-      case 'OPEN';
+    case 'OPEN' :
       broadcase("영업 시작");
       break;
-      default;
+    default :
       broadcase("영업중");
   }
 }

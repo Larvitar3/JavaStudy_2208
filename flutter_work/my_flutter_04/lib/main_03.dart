@@ -28,7 +28,6 @@ void main(){
   // Set 값 추가
   // new 생략 가능
   Set setInter = Set<int>();
-
   setInter.add(1);
   setInter.add(2);
   setInter.add(3);
@@ -41,15 +40,15 @@ void main(){
   print(setInter);
 
   var elements = computerParts;
-  print(elements);
+  print("elements : $elements");
   elements.add("abc");
-  print(elements);
+  print("elements : $elements");
 
   Set elements2 = Set();
   elements2.addAll(computerParts);
-  print(elements2);
+  print("elements2 : $elements2");
   elements2.add("추가임댜");
-  print(elements2);
+  print("elements2copy : $elements2");
 
   // addAll ▶ 깊은 복사 ( deepCopy )
 

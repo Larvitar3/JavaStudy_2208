@@ -21,7 +21,7 @@ void main(){
   print(temp);
 
   // 익명 함수와 람다식
-  // return 키워들르 적지 않아도 값이 반환 되지만
+  // return 키워드를 적지 않아도 값이 반환 되지만
   // 익명 함수는 값을 반환하려면 return 키워드를 꼭 적어야 함
 
   // 익명 함수 표현식
@@ -39,10 +39,11 @@ void main(){
   // 변수에 익명 함수를 대입할 수도 있다 (이때 Function 타입을 사용)
 
   Function add = (int n1, int n2){
-    print(n1+n2);
+    print( "add: ${n1+n2}");
   };
+
   add(3,10);
-  print(add);
+  print("add : ${add}");
 
 // 람다식
 // 함수를 하나의 식으로 표현

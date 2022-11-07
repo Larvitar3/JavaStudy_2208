@@ -9,7 +9,7 @@ void main(){
   var gifts = {
     "First":"part",
     "Second ":"test",
-    "Thterd":"SQL 자격증",
+    "Third":"SQL 자격증",
   };
 
   print(gifts);
