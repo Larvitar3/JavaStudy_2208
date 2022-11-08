@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="ch_05.server.ChatSocket"/>
-    <fullyQualifiedTypeName name="java.util.StringTokenizer"/>
     <fullyQualifiedTypeName name="javax.accessibility.Accessible"/>
     <fullyQualifiedTypeName name="ch_05.ClientConnectGUI"/>
     <fullyQualifiedTypeName name="javax.swing.border.LineBorder"/>
@@ -59,5 +57,7 @@
     <fullyQualifiedTypeName name="ch05.Movie.Data.Movies.Genres"/>
     <fullyQualifiedTypeName name="ch05.Movie"/>
     <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.util.stream.Stream"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

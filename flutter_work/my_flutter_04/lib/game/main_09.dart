@@ -17,5 +17,4 @@ class Burger{
 class CheesssBuger extends Burger{
   // super 키워드는 자식이 부모를 참조할 수 있는 키워드드
  CheesssBuger(super.name);
-
 }

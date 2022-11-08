@@ -34,7 +34,11 @@ class Student extends Person2{
   }
 }
 
+class Person{
 
+}
 
+class Person{
 
+}
 
