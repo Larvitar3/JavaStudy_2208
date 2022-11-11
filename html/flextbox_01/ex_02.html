@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .box {
+            border: 5px solid red;
+            width: 33.333333%;
+            height: 200px;
+            display: flex;
+        }
+        .box div {
+            width: 50%;
+        }
+        .box div:nth-child(1){ 
+            /* 특수선택자 nth-child(숫자) */
+            background-color: yellow;
+        }
+        .box div:nth-child(2){
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="box">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="box">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+</body>
+</html>

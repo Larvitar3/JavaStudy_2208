@@ -1,0 +1,6 @@
+1. 프로젝트 최 상단 assets 폴더 생성
+2. lib / components 패키지 생성
+3. lib / pages
+4. lib / pages / home_page.dart
+5. lib / pages / login_page.dart
+6. lib / size.dart

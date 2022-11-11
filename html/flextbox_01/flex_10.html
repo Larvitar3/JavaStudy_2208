@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*  부모 속성이 flex 여야 사용이 가능하다!
+        1. 자식 요소에서 사용하는 flex-grow : 숫자(정수) 
+            늘어날때의 비율 조절
+        2. 플렉스 자식요소 감소 너비 비율을 설정 flex-shrink : 숫자(정수) 
+            줄어들때의 비율 조절
+        3.
+       */
+        .parent {
+            border: 5px solid pink;
+            display: flex;
+        }
+        .parent div {
+            margin: 5px;
+            height: 200px;
+            width: 200px;
+            color: #fff;
+            text-align: center;
+            background-color: palevioletred;
+        }
+        .child1{
+            flex-shrink: 3;
+            /* 3분의 1 크기로 줄어듬 */
+        }
+        .child2{
+            flex-shrink: 2;
+            /* 2분의 1 크기로 줄어듬 */
+        }
+        .child3{
+            flex-shrink: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child1">1</div>
+        <div class="child2">2</div>
+        <div class="child3">3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        flex-flow
+        flex-direction 속성과 flex-wrap 속성을 flex-flow라는 축약 속성으로 합칠 수 있다.
+
+        */
+        .parent {
+            border: 5px solid hotpink;
+            display: flex;
+            flex-flow: column nowrap;
+
+        }
+        .parent div{
+            width: 100px;
+            height: 100px;
+            color: #fff;
+            text-align: center;
+            font-size: 30px;
+            margin: 5px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child1">1</div>
+        <div class="child2">2</div>
+        <div class="child3">3</div>
+        <div class="child4">4</div>
+        <div class="child5">5</div>
+        <div class="child6">6</div>
+    </div>
+</body>
+</html>

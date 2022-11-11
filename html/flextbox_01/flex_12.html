@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*  자식 요소에서 사용하는 단축 속성
+        []는 옵션 사항 3개다 적을 수도 있고 1개 ,2개만 적을 수 있다.
+        flex : [증가너비] [감소너비] [기본너비]
+        flex : [flex-grow] [flex-shrink] [flex-basis]
+
+        flex 단축 속성에 flex-grow를 제외하고 모두 생략 가능하다
+        .child{
+            flex : 1 1 50px; (증가, 감소, 기본 너비)
+            flex : 1 1; (증가, 감소너비)
+            flex : 1 50px; (증가, 기본 너비)
+            flex : 1 ; (증가 너비)
+        }
+       */
+        .parent {
+            border: 5px solid fuchsia;
+            display: flex;
+        }
+        .parent div {
+            margin: 5px;
+            height: 200px;
+            width: 200px;
+            color: #fff;
+            text-align: center;
+            /* background-color: palevioletred; */
+        }
+        .child1{
+            background-color: pink;
+            flex: 1;
+        }
+        .child2{
+            background-color: palevioletred;
+            flex: 2;
+            
+        }
+        .child3{
+            background-color: hotpink;
+            flex: 1;
+   
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child1">1</div>
+        <div class="child2">2</div>
+        <div class="child3">3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 자식 요소에서 사용하는 flex-grow : 숫자(정수) 
+        부모 속성이 flex 여야 사용이 가능하다!*/
+        .parent {
+            border: 5px solid pink;
+            display: flex;
+        }
+        .parent div {
+            margin: 5px;
+            height: 200px;
+            width: 200px;
+            color: #fff;
+            text-align: center;
+            background-color: palevioletred;
+        }
+        .child1{
+            flex-grow: 1;
+        }
+        .child2{
+            flex-grow: 3;
+        }
+        .child3{
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child1">1</div>
+        <div class="child2">2</div>
+        <div class="child3">3</div>
+    </div>
+</body>
+</html>

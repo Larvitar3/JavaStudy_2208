@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2> 자바스크립트 HTML DOM</h2>
+
+    <p class="intro">블랙핑크</p>
+    <p class="intro">아이즈원</p>
+    <p>뉴진스</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const x = document.getElementsByClassName("intro");
+        console.log(x);
+
+        // 문제 ! 
+        // demo 요소 내용에 x 0번째 내용을 출력하시오..!
+        document.getElementById("demo").innerHTML = ">>" + x[0].innerHTML;
+    </script>
+</body>
+</html>

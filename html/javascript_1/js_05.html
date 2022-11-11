@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>자바스트립트 HTML DOM</h2>
+
+    <form id ="frm1" action="#">
+        Fist name : <input type="text" name="fname" value="Donald"> 
+        Last name : <input type="text" name="lname" value="Dock">
+        <input type="submit" value="제출">
+    </form>
+
+    <p id="demo"></p>
+
+    <script>
+        //HTML 개체 컬렉션으로 HTML요소 찾기
+        const x = document.forms["frm1"];
+        console.log(x);
+
+        // let 타입추론
+        let text ="";
+        for (let i = 0; i < x.length ; i++){
+        text += x.elements[i].value + "<br>";
+        }
+        console.log(text);
+        document.getElementById("demo").innerHTML = text;
+
+    </script>
+
+</body>
+</html>

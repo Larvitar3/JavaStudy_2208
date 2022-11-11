@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .parent{
+            border: 5px solid plum;
+            height: 300px;
+            display: flex;
+            align-items: center;
+        }
+        .parent div{
+            width: 300px;
+            color: #fff;
+            text-align: center;
+            font-size: 30px;
+            margin: 5px;
+            background-color: palevioletred;
+        }
+        /* .chlid {height: 100px;} */
+        /* 높이 값이 없는 경우 자식 요소의 내용의 높이 만큼으로 맞춰짐 */
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="chlid">child</div>
+    </div>
+</body>
+</html>
