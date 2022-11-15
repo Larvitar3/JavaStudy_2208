@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_shoppingcart/constlants.dart';
+import 'package:flutter_shoppingcart/constants.dart';
 
-ThemeData theme(){
+ThemeData theme() {
   return ThemeData(
     primarySwatch: kPrimaryColor,
-    scaffoldBackgroundColor: kPrimaryColor
+    scaffoldBackgroundColor: kPrimaryColor,
   );
 }
