@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>init</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  <!-- 
+  	>>> config <<<
+  	초기 파라미터 설정 시
+  	url-patten까지 함께 설정해주어야 한다.
+   -->
+  <servlet>
+  <servlet-name>mServlet</servlet-name>
+  <jsp-file>/init_jsp.jsp</jsp-file>
+  <!-- 초기 파라미터 -->
+  <init-param>
+  	<param-name>adminId</param-name>
+  	<param-value>boot</param-value>
+  </init-param>
+  <init-param>
+  	<param-name>adminPw</param-name>
+  	<param-value>asd1234</param-value>
+  </init-param>
+  
+  </servlet>
+  
+  <servlet-mapping>
+  	  <servlet-name>mServlet</servlet-name>
+		<url-pattern>/init_jsp.jsp</url-pattern>
+  </servlet-mapping>
+  
+  <!-- >>> application <<< -->
+  <!-- 서블릿 전체에서 공유 할 수 있는 데이터를 선언 -->
+  <context-param>
+  	<param-name>imgDir</param-name>
+  	<param-value>/init/upload/img</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>testServer</param-name>
+  	<param-value>127.0.0.1</param-value>
+  </context-param>
+  
+   <context-param>
+  	<param-name>realServer</param-name>
+  	<param-value>88.0.12.1</param-value>
+  </context-param>
+  
+  <!-- 응답 코드별로 error 페이지를 지정할 수 있다  -->
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/init/errorpage.jsp</location>
+  </error-page>
+  
+</web-app>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
